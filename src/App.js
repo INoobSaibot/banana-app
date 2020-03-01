@@ -13,7 +13,8 @@ class App extends Component {
   }
 
   componentDidMount(){
-    document.addEventListener('mouseover', this.handleEvent);
+    // document.addEventListener('mouseover', this.handleEvent);
+    // document. addEventListener('touchstart', this.handleEvent)
   }
 
   handleEvent(letter){
@@ -45,7 +46,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" onMouseOver={this.handleEvent} onPointerEnter={this.handleEvent}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
