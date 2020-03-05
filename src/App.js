@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import './App.css';
 import logo from './logo.svg';
+import newLogo from './alien bananna.png'
 
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pixelData: [],
-            windowWidth: 0
+
         }
     }
 
@@ -22,7 +22,7 @@ class App extends Component {
         const x_coord = letter.x? letter.x : '';
         const y_coord = letter.y? letter.y : '';
         let response = prompt(x_coord + ' Hi.' + ' I am toby.' + ' What is your name?' + y_coord)
-        if (response.toLowerCase() == 'oliver') {
+        if (response.toLowerCase() === 'oliver') {
             prompt('hi ' + response + '. It is me, your dad!')
 
         } else if (parseInt(response)) {
@@ -33,13 +33,13 @@ class App extends Component {
 
             }
         }
-        if (response.toLowerCase() == 'grey') {
+        if (response.toLowerCase() === 'grey') {
             prompt('hello sadness')
         }
-        if (response.toLowerCase() == 'black') {
+        if (response.toLowerCase() === 'black') {
             prompt('"Hello darkness my old Friend"')
         }
-        if (response.toLowerCase() == 'yellow') {
+        if (response.toLowerCase() === 'yellow') {
             prompt('Hello, Joy!')
         } else {
             prompt('Welcome to Suspicous pixel art, ' + response + '!')
@@ -51,7 +51,7 @@ class App extends Component {
         return (
             <div className="App" onMouseOver={this.handleEvent} onPointerEnter={this.handleEvent}>
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
+                    <img src={newLogo} className="App-logo" alt="logo"/>
                     <p>
                         Edit <code>src/App.js</code> and save to reload.
                     </p>
